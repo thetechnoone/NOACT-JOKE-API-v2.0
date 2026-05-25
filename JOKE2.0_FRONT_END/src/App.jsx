@@ -1,17 +1,17 @@
-import { useState } from 'react'
-import { useEffect } from 'react'
-import './App.css'
+import { useState } from "react"
+import { useEffect } from "react"
+import { BrowserRouter, Routes, Route, Link } from "react-router";
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
-  useEffect(()=>{
-    setCount(count + 1)
-  },[])
-
   return (
-    <div>
-      <h1>{count}</h1>
+    <BrowserRouter>
+     <div>
+      <h1>Hello</h1>
     </div>
+    </BrowserRouter>
+   
   )
 }
 export default App
