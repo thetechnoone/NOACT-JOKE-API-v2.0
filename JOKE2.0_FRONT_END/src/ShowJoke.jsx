@@ -1,10 +1,10 @@
 import axios from "axios"
 
-function ShowJoke() {
+function ShowJoke({joke}) {
 
     return(
         <div>
-            
+           {} 
         </div>
     )
 
