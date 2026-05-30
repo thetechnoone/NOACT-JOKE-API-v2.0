@@ -20,6 +20,7 @@ const db = new pg.Client({
 // app.use //
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json())
+app.use(cors({origin:["http://localhost:5173/"]}))
 
 //OTHER FUNCTIONS//
 // async function jokeGetter(){
@@ -29,6 +30,16 @@ app.use(bodyParser.json())
 //SERVER FUNCTIONS//
 app.get("/",(req,res)=>{
     res.json({message:"Hello"})
+})
+
+app.get("/addjoke",async (req,res)=>{
+    // try{
+    //     await db.query("INSERT INTO")
+    // }
+    // catch(error){
+    //     console.log(error)
+    // }
+    console.log(req.body)
 })
 
 app.listen(PORT,()=>{
